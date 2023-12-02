@@ -1,0 +1,19 @@
+/*
+    Theme Name: Fictional University
+    Author: Kean Duque
+    Author: the WordPress team
+    Author URI: https://github.com/keanduque
+    Version: 1.0
+    Description: Kean Custom Theme for Neticon
+    Requires at least: 6.4
+    Tested up to: 6.4
+    Requires PHP: 7.0
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    License: GNU General Public License v2 or later
+    Text Domain: kean-theme
+    Tags: keanduque, keanmind, custom-theme, portfolio, UAT
+*/
+
+body {
+    color : orange;
+}
