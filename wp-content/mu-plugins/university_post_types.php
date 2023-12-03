@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'debug_to_console');
 
 function university_post_types(){
 
-    // Event post type
+    // Event Post type
     register_post_type('event', array(
         'show_in_rest'      => true,
         'supports'          => array('title','editor', 'excerpt'),
@@ -33,7 +33,7 @@ function university_post_types(){
         'menu_icon'         => 'dashicons-calendar'
     ));
 
-    // Program post type
+    // Program Post type
     register_post_type('program', array(
         'show_in_rest'      => true,
         'supports'          => array('title','editor'),
@@ -51,6 +51,24 @@ function university_post_types(){
             'not_found_in_trash'    => __( 'No Programs found in Trash.' ),
         ),
         'menu_icon'         => 'dashicons-awards'
+    ));
+
+    // Professor Post type
+    register_post_type('professor', array(
+        'show_in_rest'      => true,
+        'supports'           => array('title', 'editor', 'thumbnail'), 
+        'public'            => true,
+        'labels'            => array(
+            'name'                  => __('Professors'),
+            'singular_name'         => __('Professor'),
+            'add_new'               => __('Add New Professor'),
+            'add_new_item'          => __('Add New Professor'),
+            'edit_item'             => __('Edit Professor'),
+            'all_items'             => __('All Professors'),
+            'not_found'             => __( 'No Professors found.' ),
+            'not_found_in_trash'    => __( 'No Professors found in Trash.' ),
+        ),
+        'menu_icon'         => 'dashicons-welcome-learn-more'
     ));
 }
 add_action('init', 'university_post_types');
