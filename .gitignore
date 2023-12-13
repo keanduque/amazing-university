@@ -40,6 +40,8 @@ local-*
 
 # ignore node dependency directories (used by grunt)
 node_modules/
+build/
+build/*
 
 # ignore OS generated files
 ehthumbs.db

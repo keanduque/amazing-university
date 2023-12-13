@@ -13,6 +13,26 @@ add_action('wp_enqueue_scripts', 'debug_to_console');
 
 function university_post_types(){
 
+    // Campus Post type
+    register_post_type('campus', array(
+        'show_in_rest'      => true,
+        'supports'          => array('title','editor', 'excerpt'),
+        'rewrite'           => array('slug' => 'campuses'),
+        'has_archive'       => true,
+        'public'            => true,
+        'labels'            => array(
+            'name'                  => __('Campuses'),
+            'singular_name'         => __('Campus'),
+            'add_new'               => __('Add New Campus'),
+            'add_new_item'          => __('Add New Campus'),
+            'edit_item'             => __('Edit Campus'),
+            'all_items'             => __('All Campuses'),
+            'not_found'             => __( 'No Campuses found.' ),
+            'not_found_in_trash'    => __( 'No Campuses found in Trash.' ),
+        ),
+        'menu_icon'         => 'dashicons-location-alt'        
+    ));
+
     // Event Post type
     register_post_type('event', array(
         'show_in_rest'      => true,
