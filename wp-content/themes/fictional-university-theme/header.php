@@ -23,8 +23,8 @@
                    <ul>
                         <li <?php echo currentLink('about-us', 12) ?>><a href="<?php echo site_url('/about-us'); ?>">About Us</a></li>
                         <li <?php echo postTypeLink('program');?>><a href="<?php echo get_post_type_archive_link('program');?>">Programs</a></li>
-                        <li <?php echo postTypeLink('event');?>"><a href="<?php echo get_post_type_archive_link('event');?>">Events</a></li>
-                        <li><a href="#">Campuses</a></li>
+                        <li <?php echo postTypeLink('event');?>><a href="<?php echo get_post_type_archive_link('event');?>">Events</a></li>
+                        <li <?php echo postTypeLink('campus');?>><a href="<?php echo get_post_type_archive_link('campus');?>">Campuses</a></li>
                         <li <?php echo postTypeLink('post');?>><a href="<?php echo get_post_type_archive_link('post')?>">Blog</a></li>
                     </ul>
                 </nav>
